@@ -7,6 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.network "forwarded_port", guest: 5000, host: 8081
+  config.vm.network "forwarded_port", guest: 9000, host: 9000
 
   config.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
@@ -18,6 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, :path => "vagrant_provision/bootstrap.sh"
   config.vm.provision :shell, :path => "vagrant_provision/npm-update.sh"
+  config.vm.provision :shell, :path => "vagrant_provision/start.sh"
 
 
 end

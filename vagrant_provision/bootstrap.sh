@@ -17,4 +17,9 @@ cd ..
 rm -rf node-v0.10.31
 rm node-v0.10.31.tar.gz
 
+# Установка демонайзера для node
+npm install -g forever
+
+mkdir /var/run/forever
+
 touch /.bootstrap.done
