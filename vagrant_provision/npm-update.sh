@@ -1,2 +1,4 @@
 cd /vagrant
 npm install
+
+

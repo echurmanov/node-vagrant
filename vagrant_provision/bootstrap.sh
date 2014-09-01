@@ -22,4 +22,7 @@ npm install -g forever
 
 mkdir /var/run/forever
 
+#Создадим пользователя для node приложений
+useradd -r -s /bin/false node
+
 touch /.bootstrap.done
